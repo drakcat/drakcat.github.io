@@ -1,0 +1,1247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Chen Lang&#39;s blog</title>
+        <meta name="author" content="Chen Lan Lan" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="https://s1.ax1x.com/2023/07/07/pCc0nO0.png" />
+        <script src="https://static-argvchs.netlify.app/libs/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="preconnect" href="https://static-argvchs.netlify.app" crossorigin />
+<link rel="stylesheet" href="https://static-argvchs.netlify.app/libs/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="https://static-argvchs.netlify.app/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://static-argvchs.netlify.app/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://static-argvchs.netlify.app/libs/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://static-argvchs.netlify.app/libs/KaTeX/0.16.4/katex.min.js"></script>
+<script src="https://static-argvchs.netlify.app/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://static-argvchs.netlify.app/libs/KaTeX/0.16.4/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<script src="https://static-argvchs.netlify.app/libs/animejs/3.2.1/anime.min.js"></script>
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+                <div id="loading" v-show="loading">
+                    <div id="loading-circle">
+                        <h2>LOADING</h2>
+                        <p>加载过慢请开启缓存 浏览器默认开启</p>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/loading.gif" />
+                    </div>
+                </div>
+            </transition>
+            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <div id="desktop-menu">
+        <a class="title" href="/">
+            <span>CHEN LANG&#39;S BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;CHEN LANG&#39;S BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </div>
+</nav>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+            <transition name="into">
+                <div id="main" v-show="!loading">
+                    <div id="home-head">
+    <div id="home-background" ref="homeBackground" data-images="https://s1.ax1x.com/2023/07/07/pCc0QTU.jpg"></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>Chen Lang&#39;s blog</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div id="home-posts-wrap" true ref="homePostsWrap">
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2023/05/20/Selenium/">
+        <h2 class="post-title">Selenium</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/20
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="Selenium"><a href="#Selenium" class="headerlink" title="Selenium"></a>Selenium</h1><p>Selenium是一个用于Web应用程序测试的工具；中文的意思（硒）</p>
+<p>特点</p>
+<p>开源软件：源代码开放可以根据需要来增加工具的某些功能<br>跨平台：linux 、windows 、mac<br>核心功能：就是可以在多个浏览器上进行自动化测试<br>多语言：Java、Python、C#、JavaScript、Ruby等<br>成熟稳定：目前已经被google , 百度， 腾讯等公司广泛使用<br>功能强大：能够实现类似商业工具的大部分功能，因为开源性，可实现定制化功能</p>
+<h1 id="WebDriverAPI-支持的开发语言"><a href="#WebDriverAPI-支持的开发语言" class="headerlink" title="WebDriverAPI 支持的开发语言"></a>WebDriverAPI 支持的开发语言</h1><p>Java<br>Python<br>PHP<br>JavaScript<br>Perl<br>Ruby<br>C#<br>Selenium WebDriver 原理</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/webdriver.png" alt="webdriver"></p>
+<p>Selenium Client Library<br>Selenium自动化测试人员可以使用Java、Ruby、Python、C#等语言，利用它们提供的库来编写脚本。<br>JSON Wire Protocol Over HTTP Client<br>JSON Wire Protocol是在HTTP服务器之间传输信息的REST风格的API。每个浏览器驱动程序（如FirefoxDriver、ChromeDriver等）都有它们各自的HTTP服务器。<br>Browser Drivers<br>不同的浏览器都包含一个单独的浏览器驱动程序。浏览器驱动程序与相应的浏览器通信。当浏览器驱动程序接收到任何指令时，将在相应的浏览器中执行，响应信息将以HTTP的形式返回。<br>Browsers<br>Selenium支持多种浏览器，如Firefox、Chrome、IE、Safari等。</p>
+<h1 id="selenium-安装、卸载、查看命令"><a href="#selenium-安装、卸载、查看命令" class="headerlink" title="selenium 安装、卸载、查看命令"></a>selenium 安装、卸载、查看命令</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>pip install selenium
+</code></pre>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><pre><code>pip uninstall selenium
+</code></pre>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><pre><code>pip show selenium
+</code></pre>
+<p>WebDriver下载地址</p>
+<h2 id="官方列表"><a href="#官方列表" class="headerlink" title="官方列表"></a>官方列表</h2><p><a target="_blank" rel="noopener" href="http://www.seleniumhq.org/download/">http://www.seleniumhq.org/download/</a></p>
+<h2 id="国内镜像"><a href="#国内镜像" class="headerlink" title="国内镜像"></a>国内镜像</h2><p>ChromeWebDriver</p>
+<p><a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/chromedriver/">https://npm.taobao.org/mirrors/chromedriver/</a></p>
+<p>FireFoxWebDriver</p>
+<p><a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/geckodriver/">https://npm.taobao.org/mirrors/geckodriver/</a></p>
+<p>WebDriver放置到特定目录中[可选]</p>
+<p>(在系统的PATH变量中)</p>
+<h1 id="selemium的基本使用"><a href="#selemium的基本使用" class="headerlink" title="selemium的基本使用"></a>selemium的基本使用</h1><pre><code>from selenium import webdriver
+from time import sleep
+
+# 创建WebDriver对象
+# 如果把驱动放置到了 系统环境变量目录中，可不带参数创建
+driver=webdriver.Chrome()
+# 如果没有放置到系统环境变量目录中，需要通过参数指定
+# driver= webdriver.Chrome(executable_path=&quot;./chromedriver.exe&quot;)
+url=&#39;https://www.baidu.com&#39;
+# 使用浏览器打开指定页面
+driver.get(url)
+sleep(3)
+# 关闭浏览器
+driver.quit()
+</code></pre>
+<h1 id="元素查找"><a href="#元素查找" class="headerlink" title="元素查找"></a>元素查找</h1><p>id : find_element_by_id<br>name : find_element_by_name<br>class_name : find_element_by_class_name<br>tag_name :find_element_by_tag_name</p>
+<p>例子：对于 一段html</p>
+<pre><code>  &lt;input id=&quot;username_id&quot; type=&quot;text&quot; name=&quot;username&quot; class=&quot;red&quot; &gt;
+</code></pre>
+<p>如下代码都可以获取到这个标签</p>
+<pre><code>
+  # id
+  driver.find_element_by_id(&quot;username_id&quot;)
+  # name
+  driver.find_element_by_name(&quot;username&quot;)
+  # class_name
+  driver.find_element_by_class_name(&quot;red&quot;)
+  # tag_name
+  driver.find_element_by_tag_name(&quot;input&quot;)
+</code></pre>
+<p>超链接(a标签)<br>link_text<br>partial_link_text</p>
+<p>超链接的例子</p>
+<p>对于 一段html</p>
+<pre><code>&lt;a href=&quot;http://www.baidu.com&quot; id=&quot;fwA&quot; target=&quot;_blank&quot;&gt;访问 百度 网站&lt;/a&gt;
+</code></pre>
+<p>如下代码都可以获取到这个标签</p>
+<pre><code># link_text
+driver.find_element_by_link_text(&quot;访问 百度 网站&quot;)
+# partial_link_text
+driver.find_element_by_partial_link_text(&quot;访问&quot;)
+</code></pre>
+<p>获取元素的方式-css选择器<br>css选择器语法<br>选择器	           例子  	例子描述</p>
+<pre><code>.class	          .intro	    选择 class=&quot;intro&quot; 的所有元素。
+#id	              #firstname    选择 id=&quot;firstname&quot; 的所有元素。
+*	*	          选择所有元素。
+element	              p	        选择所有&lt;p&gt;元素。
+element,element     div,p	    选择所有 &lt;div&gt;元素和所有 &lt;p&gt;元素。
+element element  	div p	    选择&lt;div&gt;元素内部的所有 &lt;p&gt;元素。
+element&gt;element	    div&gt;p	    选择父元素为&lt;div&gt;元素的所有 &lt;p&gt; 元素。
+element+element 	div+p	    选择紧接在 &lt;div&gt;元素之后的所有 &lt;p&gt;元素。
+[attribute]	       [target]	    选择带有 target 属性所有元素。
+[attribute=value][target=_blank]	选择 target=&quot;_blank&quot; 的所有元素。
+</code></pre>
+<p>方法		</p>
+<p>find_element_by_css_selector(CSS选择器)</p>
+<p>例子</p>
+<p>对于 一段html</p>
+<pre><code>&lt;input id=&quot;username_id&quot; type=&quot;text&quot; name=&quot;username&quot; class=&quot;red&quot; &gt;
+</code></pre>
+<p>如下代码都可以获取到这个标签</p>
+<pre><code># id选择器
+driver.find_element_by_css_selector(&quot;#username_id&quot;)
+# 属性选择器
+driver.find_element_by_css_selector(&quot;[name=username]&quot;)
+# 类选择器
+driver.find_element_by_css_selector(&quot;.red&quot;)
+# 标签选择器
+driver.find_element_by_css_selector(&quot;input&quot;)
+</code></pre>
+<p>获取元素的方式-xpath<br>xpath概念</p>
+<p>xpath &#x3D; xml path</p>
+<p>XML 和HTML一样是标签语言，通过标签的嵌套 来表达信息。自然而然形成了父节点、子节点、后代节点、祖先节点、同胞节点等关系。 而xpath就是用来在这些节点中找到所需要的。</p>
+<p>xpath表达式</p>
+<pre><code>表达式	                   描述
+nodename	      选取此节点的所有子节点。
+/	              从根节点选取。
+//	              从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。
+.	              选取当前节点。
+..	              选取当前节点的父节点。
+
+            获取内容
+表达式	                        描述
+@	                         选取属性。
+text()	                     获取文本
+
+           进阶表达式
+路径表达式                     结果
+/bookstore/book[1]	选取属于 bookstore 子元素的第一个 book 元素。
+/bookstore/book[last()]	选取属于 bookstore 子元素的最后一个 book 元素。
+/bookstore/book[last()-1]	选取属于 bookstore 子元素的倒数第二个 book 元素。
+//book/title[text()=&#39;Harry Potter&#39;]	选择所有book下的title元素，仅仅选择文本为Harry Potter的title元素
+//title[@lang=&quot;eng&quot;]	选择lang属性值为eng的所有title元素
+</code></pre>
+<p>实践使用方式<br>通过Chrome的调试工具，获得特定元素的xpath<br>修改得到的xpath表达式<br>通过 chrome的 xpath helper 扩展插件 匹配查看</p>
+<p>获取元素-By<br>webDriver的方法<br>from selenium.webdriver.common.by import By</p>
+<pre><code># def find_element(self, by=By.ID, value=None):
+# def find_elements(self, by=By.ID, value=None):
+</code></pre>
+<p>By的源码</p>
+<pre><code>class By(object):
+    &quot;&quot;&quot;
+    Set of supported locator strategies.
+    &quot;&quot;&quot;
+
+    ID = &quot;id&quot;
+    XPATH = &quot;xpath&quot;
+    LINK_TEXT = &quot;link text&quot;
+    PARTIAL_LINK_TEXT = &quot;partial link text&quot;
+    NAME = &quot;name&quot;
+    TAG_NAME = &quot;tag name&quot;
+    CLASS_NAME = &quot;class name&quot;
+    CSS_SELECTOR = &quot;css selector&quot;
+
+    @classmethod
+    def is_valid(cls, by):
+        for attr in dir(cls):
+            if by == getattr(cls, attr):
+                return True
+        return False
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/05/20/Selenium/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/15/%E5%AD%97%E5%85%B8/">
+        <h2 class="post-title">字典</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/15
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="字典介绍"><a href="#字典介绍" class="headerlink" title="字典介绍"></a>字典介绍</h1><blockquote>
+<p>字典</p>
+</blockquote>
+<p>另一个场景：</p>
+<p>学生信息列表，每个学生信息包括学号、姓名、年龄等，如何从中找到某个学生的信息？</p>
+<pre><code class="python">&gt;&gt;&gt; studens = [[1001, &quot;王bao强&quot;, 24], [1002, &quot;马rong&quot;, 23], [1005, &quot;宋x&quot;，24], ...]
+</code></pre>
+<h2 id="1-软件开发中的字典"><a href="#1-软件开发中的字典" class="headerlink" title="1. 软件开发中的字典"></a>1. 软件开发中的字典</h2><p>变量info为字典类型：</p>
+<pre><code class="python">info = &#123;&#39;name&#39;:&#39;班长&#39;, &#39;id&#39;:100, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;地球亚洲中国北京&#39;&#125;
+</code></pre>
+<p>说明：</p>
+<ul>
+<li>字典和列表一样，也能够存储多个数据</li>
+<li>列表中找某个元素时，是根据下标进行的</li>
+<li>字典中找某个元素时，是根据’名字’（就是冒号:前面的那个值，例如上面代码中的’name’、’id’、’sex’）</li>
+<li>字典的每个元素由2部分组成，键:值。例如 ‘name’:’班长’ ,’name’为键，’班长’为值</li>
+</ul>
+<h2 id="2-根据键访问值"><a href="#2-根据键访问值" class="headerlink" title="2 根据键访问值"></a>2 根据键访问值</h2><pre><code class="python">info = &#123;&#39;name&#39;:&#39;班长&#39;, &#39;id&#39;:100, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;地球亚洲中国北京&#39;&#125;
+
+print(info[&#39;name&#39;])
+print(info[&#39;address&#39;])
+</code></pre>
+<p>结果:</p>
+<pre><code>班长
+地球亚洲中国北京
+</code></pre>
+<p>若访问不存在的键，则会报错：</p>
+<pre><code class="python">&gt;&gt;&gt; info[&#39;age&#39;]
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+KeyError: &#39;age&#39;
+</code></pre>
+<p>在我们不确定字典中是否存在某个键而又想获取其值时，可以使用get方法，还可以设置默认值：</p>
+<pre><code class="python">&gt;&gt;&gt; age = info.get(&#39;age&#39;)
+&gt;&gt;&gt; age #&#39;age&#39;键不存在，所以age为None
+&gt;&gt;&gt; type(age)
+&lt;type &#39;NoneType&#39;&gt;
+&gt;&gt;&gt; age = info.get(&#39;age&#39;, 18) # 若info中不存在&#39;age&#39;这个键，就返回默认值18
+&gt;&gt;&gt; age
+18
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/03/15/%E5%AD%97%E5%85%B8/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/13/%E5%85%83%E7%BB%84/">
+        <h2 class="post-title">元组</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/13
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h1><p>Python的元组与列表类似，不同之处在于<strong>元组的元素不能修改</strong>。元组使用小括号，列表使用方括号。</p>
+<pre><code class="python">&gt;&gt;&gt; aTuple = (&#39;et&#39;,77,99.9)
+&gt;&gt;&gt; aTuple
+(&#39;et&#39;,77,99.9)
+</code></pre>
+<h4 id="lt-1-gt-访问元组"><a href="#lt-1-gt-访问元组" class="headerlink" title="&lt;1&gt;访问元组"></a>&lt;1&gt;访问元组</h4><pre><code>&gt;&gt;&gt;tuple=(&#39;hello&#39;,100,3.14)
+&gt;&gt;&gt;tuple[0]
+&#39;hello&#39;
+&gt;&gt;&gt;tuple[1]
+100
+&gt;&gt;&gt;tuple[2]
+3.14
+</code></pre>
+<h4 id="lt-2-gt-修改元组"><a href="#lt-2-gt-修改元组" class="headerlink" title="&lt;2&gt;修改元组"></a>&lt;2&gt;修改元组</h4><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/Snip20160815_303.png" alt="img"></p>
+<p>说明： <strong>python中不允许修改元组的数据，包括不能删除其中的元素。</strong></p>
+<h4 id="lt-3-gt-count-index"><a href="#lt-3-gt-count-index" class="headerlink" title="&lt;3&gt;count, index"></a>&lt;3&gt;count, index</h4><p>index和count与字符串和列表中的用法相同</p>
+<pre><code class="python">&gt;&gt;&gt; a = (&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;b&#39;)
+&gt;&gt;&gt; a.index(&#39;a&#39;, 1, 3) # 注意是左闭右开区间
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+ValueError: tuple.index(x): x not in tuple
+&gt;&gt;&gt; a.index(&#39;a&#39;, 1, 4)
+3
+&gt;&gt;&gt; a.count(&#39;b&#39;)
+2
+&gt;&gt;&gt; a.count(&#39;d&#39;)
+0
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/03/13/%E5%85%83%E7%BB%84/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/13/%E5%AD%97%E5%85%B8%E7%9A%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">
+        <h2 class="post-title">字典的常见操作</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/13
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="字典的常见操作"><a href="#字典的常见操作" class="headerlink" title="字典的常见操作"></a>字典的常见操作</h1><h2 id="1-查看元素"><a href="#1-查看元素" class="headerlink" title="1. 查看元素"></a>1. 查看元素</h2><p>除了使用key查找数据，还可以使用get来获取数据</p>
+<p>demo:</p>
+<pre><code class="python">    info = &#123;&#39;name&#39;:&#39;吴彦祖&#39;,&#39;age&#39;:18&#125;
+
+    print(info[&#39;age&#39;]) # 获取年龄
+
+    # print(info[&#39;sex&#39;]) # 获取不存在的key，会发生异常
+
+    print(info.get(&#39;sex&#39;)) # 获取不存在的key，获取到空的内容，不会出现异常
+</code></pre>
+<h2 id="2-修改元素"><a href="#2-修改元素" class="headerlink" title="2. 修改元素"></a>2. 修改元素</h2><p>字典的每个元素中的数据是可以修改的，只要通过key找到，即可修改</p>
+<p>demo:</p>
+<pre><code class="python">    info = &#123;&#39;name&#39;:&#39;班长&#39;, &#39;id&#39;:100, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;地球亚洲中国北京&#39;&#125;
+
+    newId = input(&#39;请输入新的学号&#39;)
+
+    info[&#39;id&#39;] = int(newId)
+
+    print(&#39;修改之后的id为%d:&#39;%info[&#39;id&#39;])
+</code></pre>
+<h2 id="3-添加元素"><a href="#3-添加元素" class="headerlink" title="3. 添加元素"></a>3. 添加元素</h2><p>demo:访问不存在的元素</p>
+<pre><code class="python">    info = &#123;&#39;name&#39;:&#39;班长&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;地球亚洲中国北京&#39;&#125;
+
+    print(&#39;id为:%d&#39;%info[&#39;id&#39;])
+</code></pre>
+<p>如果在使用 <strong>变量名[‘键’] &#x3D; 数据</strong> 时，这个“键”在字典中，不存在，那么就会新增这个元素</p>
+<p>demo:添加新的元素</p>
+<pre><code class="python">    info = &#123;&#39;name&#39;:&#39;班长&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;地球亚洲中国北京&#39;&#125;
+
+    # print(&#39;id为:%d&#39;%info[&#39;id&#39;])#程序会终端运行，因为访问了不存在的键
+
+    newId = input(&#39;请输入新的学号&#39;)
+
+    info[&#39;id&#39;] = newId
+
+    print(&#39;添加之后的id为:%d&#39;%info[&#39;id&#39;])
+</code></pre>
+<p>结果:</p>
+<pre><code>    请输入新的学号188
+    添加之后的id为: 188
+</code></pre>
+<h2 id="4-删除元素"><a href="#4-删除元素" class="headerlink" title="4. 删除元素"></a>4. 删除元素</h2><p>对字典进行删除操作，有一下几种：</p>
+<ul>
+<li>del</li>
+<li>clear()</li>
+</ul>
+<p>demo:del删除指定的元素</p>
+<pre><code class="python">    info = &#123;&#39;name&#39;:&#39;班长&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;地球亚洲中国北京&#39;&#125;
+
+    print(&#39;删除前,%s&#39;%info[&#39;name&#39;])
+
+    del info[&#39;name&#39;]
+
+    print(&#39;删除后,%s&#39;%info[&#39;name&#39;])
+</code></pre>
+<p>demo:del删除整个字典</p>
+<pre><code class="python">    info = &#123;&#39;name&#39;:&#39;monitor&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;China&#39;&#125;
+
+    print(&#39;删除前,%s&#39;%info)
+
+    del info
+
+    print(&#39;删除后,%s&#39;%info)
+</code></pre>
+<p>demo:clear清空整个字典</p>
+<pre><code class="python">    info = &#123;&#39;name&#39;:&#39;monitor&#39;, &#39;sex&#39;:&#39;f&#39;, &#39;address&#39;:&#39;China&#39;&#125;
+
+    print(&#39;清空前,%s&#39;%info)
+
+    info.clear()
+
+    print(&#39;清空后,%s&#39;%info)
+</code></pre>
+<h1 id="字典的常见操作2"><a href="#字典的常见操作2" class="headerlink" title="字典的常见操作2"></a>字典的常见操作2</h1><h3 id="1-len"><a href="#1-len" class="headerlink" title="1. len()"></a>1. len()</h3><p>测量字典中，键值对的个数</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/Snip20160815_292.png" alt="img"></p>
+<h3 id="2-keys"><a href="#2-keys" class="headerlink" title="2. keys"></a>2. keys</h3><p>返回一个包含字典所有KEY的列表</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/Snip20160815_293.png" alt="img"></p>
+<h3 id="3-values"><a href="#3-values" class="headerlink" title="3. values"></a>3. values</h3><p>返回一个包含字典所有value的列表</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/Snip20160815_294.png" alt="img"></p>
+<h3 id="4-items"><a href="#4-items" class="headerlink" title="4. items"></a>4. items</h3><p>返回一个包含所有（键，值）元祖的列表</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/Snip20160815_295.png" alt="img"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/03/13/%E5%AD%97%E5%85%B8%E7%9A%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/13/%E9%81%8D%E5%8E%86/">
+        <h2 class="post-title">遍历</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/13
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h1><p>通过for … in … 我们可以遍历字符串、列表、元组、字典等</p>
+<p><strong>注意python语法的缩进</strong></p>
+<h2 id="1-字符串遍历"><a href="#1-字符串遍历" class="headerlink" title="1. 字符串遍历"></a>1. 字符串遍历</h2><pre><code class="python">&gt;&gt;&gt; a_str = &quot;hello itcast&quot;
+&gt;&gt;&gt; for char in a_str:
+...     print(char,end=&#39; &#39;)
+...
+h e l l o   i t c a s t
+</code></pre>
+<h2 id="2-列表遍历"><a href="#2-列表遍历" class="headerlink" title="2. 列表遍历"></a>2. 列表遍历</h2><pre><code class="python">&gt;&gt;&gt; a_list = [1, 2, 3, 4, 5]
+&gt;&gt;&gt; for num in a_list:
+...     print(num,end=&#39; &#39;)
+...
+1 2 3 4 5
+</code></pre>
+<h2 id="3-元组遍历"><a href="#3-元组遍历" class="headerlink" title="3. 元组遍历"></a>3. 元组遍历</h2><pre><code class="python">&gt;&gt;&gt; a_turple = (1, 2, 3, 4, 5)
+&gt;&gt;&gt; for num in a_turple:
+...     print(num,end=&quot; &quot;)
+1 2 3 4 5
+</code></pre>
+<h2 id="4-字典遍历"><a href="#4-字典遍历" class="headerlink" title="4. 字典遍历"></a>4. 字典遍历</h2><h4 id="4-1-遍历字典的key（键）"><a href="#4-1-遍历字典的key（键）" class="headerlink" title="4.1. 遍历字典的key（键）"></a>4.1. 遍历字典的key（键）</h4><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/Snip20160815_297.png" alt="img"></p>
+<h4 id="4-2-遍历字典的value（值）"><a href="#4-2-遍历字典的value（值）" class="headerlink" title="4.2. 遍历字典的value（值）"></a>4.2. 遍历字典的value（值）</h4><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/Snip20160815_298.png" alt="img"></p>
+<h4 id="4-3-遍历字典的项（元素）"><a href="#4-3-遍历字典的项（元素）" class="headerlink" title="4.3. 遍历字典的项（元素）"></a>4.3. 遍历字典的项（元素）</h4><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/Snip20160815_299.png" alt="img"></p>
+<h4 id="4-4-遍历字典的key-value（键值对）"><a href="#4-4-遍历字典的key-value（键值对）" class="headerlink" title="4.4. 遍历字典的key-value（键值对）"></a>4.4. 遍历字典的key-value（键值对）</h4><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/images/Snip20160815_300.png" alt="img"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/03/13/%E9%81%8D%E5%8E%86/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/12/%E5%88%97%E8%A1%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">
+        <h2 class="post-title">列表的相关操作</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/12
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="列表的相关操作"><a href="#列表的相关操作" class="headerlink" title="列表的相关操作"></a>列表的相关操作</h1><p>列表中存放的数据是可以进行修改的，比如”增”、”删”、”改”、”查”</p>
+<h3 id="1-添加元素-“增”append-extend-insert"><a href="#1-添加元素-“增”append-extend-insert" class="headerlink" title="1. 添加元素(“增”append, extend, insert)"></a>1. 添加元素(“增”append, extend, insert)</h3><h6 id="append"><a href="#append" class="headerlink" title="append"></a>append</h6><p>通过append可以向列表添加元素</p>
+<p>demo:</p>
+<pre><code class="python">    #定义变量A，默认有3个元素
+    A = [&#39;xiaoWang&#39;,&#39;xiaoZhang&#39;,&#39;xiaoHua&#39;]
+
+    print(&quot;-----添加之前，列表A的数据-----&quot;)
+    for tempName in A:
+        print(tempName)
+
+    #提示、并添加元素
+    temp = input(&#39;请输入要添加的学生姓名:&#39;)
+    A.append(temp)
+
+    print(&quot;-----添加之后，列表A的数据-----&quot;)
+    for tempName in A:
+        print(tempName)
+</code></pre>
+<p>结果:</p>
+<pre><code>输入:zhangsan
+结果
+xiaoWang
+xiaoZhang
+xiaoHua
+zhangsan
+</code></pre>
+<h6 id="extend"><a href="#extend" class="headerlink" title="extend"></a>extend</h6><p>通过extend可以将另一个集合中的元素逐一添加到列表中</p>
+<pre><code class="python">&gt;&gt;&gt; a = [1, 2]
+&gt;&gt;&gt; b = [3, 4]
+&gt;&gt;&gt; a.append(b)
+&gt;&gt;&gt; a
+[1, 2, [3, 4]]
+&gt;&gt;&gt; a.extend(b)
+&gt;&gt;&gt; a
+[1, 2, [3, 4], 3, 4]
+</code></pre>
+<h6 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h6><p>insert(index, object) 在指定位置index前插入元素object</p>
+<pre><code class="python">&gt;&gt;&gt; a = [0, 1, 2]
+&gt;&gt;&gt; a.insert(1, 3)
+&gt;&gt;&gt; a
+[0, 3, 1, 2]
+</code></pre>
+<h3 id="2-修改元素-“改”"><a href="#2-修改元素-“改”" class="headerlink" title="2. 修改元素(“改”)"></a>2. 修改元素(“改”)</h3><p>修改元素的时候，要通过下标来确定要修改的是哪个元素，然后才能进行修改</p>
+<p>demo:</p>
+<pre><code class="python">    #定义变量A，默认有3个元素
+    A = [&#39;xiaoWang&#39;,&#39;xiaoZhang&#39;,&#39;xiaoHua&#39;]
+
+    print(&quot;-----修改之前，列表A的数据-----&quot;)
+    for tempName in A:
+        print(tempName)
+
+    #修改元素
+    A[1] = &#39;xiaoLu&#39;
+
+    print(&quot;-----修改之后，列表A的数据-----&quot;)
+    for tempName in A:
+        print(tempName)
+</code></pre>
+<p>结果:</p>
+<pre><code>    -----修改之前，列表A的数据-----
+    xiaoWang
+    xiaoZhang
+    xiaoHua
+    -----修改之后，列表A的数据-----
+    xiaoWang
+    xiaoLu
+    xiaoHua
+</code></pre>
+<h3 id="3-查找元素-“查”in-not-in-index-count"><a href="#3-查找元素-“查”in-not-in-index-count" class="headerlink" title="3. 查找元素(“查”in, not in, index, count)"></a>3. 查找元素(“查”in, not in, index, count)</h3><p>所谓的查找，就是看看指定的元素是否存在</p>
+<h6 id="in-not-in"><a href="#in-not-in" class="headerlink" title="in, not in"></a>in, not in</h6><p>python中查找的常用方法为：</p>
+<ul>
+<li>in（存在）,如果存在那么结果为true，否则为false</li>
+<li>not in（不存在），如果不存在那么结果为true，否则false</li>
+</ul>
+<p>demo</p>
+<pre><code class="python">    #待查找的列表
+    nameList = [&#39;xiaoWang&#39;,&#39;xiaoZhang&#39;,&#39;xiaoHua&#39;]
+
+    #获取用户要查找的名字
+    findName = input(&#39;请输入要查找的姓名:&#39;)
+
+    #查找是否存在
+    if findName in nameList:
+        print(&#39;在字典中找到了相同的名字&#39;)
+    else:
+        print(&#39;没有找到&#39;)
+</code></pre>
+<p>说明：</p>
+<blockquote>
+<p>in的方法只要会用了，那么not in也是同样的用法，只不过not in判断的是不存在</p>
+</blockquote>
+<h6 id="index-count"><a href="#index-count" class="headerlink" title="index, count"></a>index, count</h6><p>index和count与字符串中的用法相同</p>
+<pre><code class="python">&gt;&gt;&gt; a = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;b&#39;]
+&gt;&gt;&gt; a.index(&#39;a&#39;, 1, 3) # 注意是左闭右开区间
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+ValueError: &#39;a&#39; is not in list
+&gt;&gt;&gt; a.index(&#39;a&#39;, 1, 4)
+3
+&gt;&gt;&gt; a.count(&#39;b&#39;)
+2
+&gt;&gt;&gt; a.count(&#39;d&#39;)
+0
+</code></pre>
+<h3 id="4-删除元素-del-pop-remove"><a href="#4-删除元素-del-pop-remove" class="headerlink" title="4.删除元素(del, pop, remove)"></a>4.删除元素(del, pop, remove)</h3><p>类比现实生活中，如果某位同学调班了，那么就应该把这个条走后的学生的姓名删除掉；在开发中经常会用到删除这种功能。</p>
+<p>列表元素的常用删除方法有：</p>
+<ul>
+<li>del：根据下标进行删除</li>
+<li>pop：删除最后一个元素</li>
+<li>remove：根据元素的值进行删除</li>
+</ul>
+<p>demo:(del)</p>
+<pre><code class="python">    movieName = [&#39;加勒比海盗&#39;,&#39;骇客帝国&#39;,&#39;第一滴血&#39;,&#39;指环王&#39;,&#39;霍比特人&#39;,&#39;速度与激情&#39;]
+
+    print(&#39;------删除之前------&#39;)
+    for tempName in movieName:
+        print(tempName)
+
+    del movieName[2]
+
+    print(&#39;------删除之后------&#39;)
+    for tempName in movieName:
+        print(tempName)
+</code></pre>
+<p>结果:</p>
+<pre><code>    ------删除之前------
+    加勒比海盗
+    骇客帝国
+    第一滴血
+    指环王
+    霍比特人
+    速度与激情
+    ------删除之后------
+    加勒比海盗
+    骇客帝国
+    指环王
+    霍比特人
+    速度与激情
+</code></pre>
+<p>demo:(pop)</p>
+<pre><code class="python">    movieName = [&#39;加勒比海盗&#39;,&#39;骇客帝国&#39;,&#39;第一滴血&#39;,&#39;指环王&#39;,&#39;霍比特人&#39;,&#39;速度与激情&#39;]
+
+    print(&#39;------删除之前------&#39;)
+    for tempName in movieName:
+        print(tempName)
+
+    movieName.pop()
+
+    print(&#39;------删除之后------&#39;)
+    for tempName in movieName:
+        print(tempName)
+</code></pre>
+<p>结果:</p>
+<pre><code>    ------删除之前------
+    加勒比海盗
+    骇客帝国
+    第一滴血
+    指环王
+    霍比特人
+    速度与激情
+    ------删除之后------
+    加勒比海盗
+    骇客帝国
+    第一滴血
+    指环王
+    霍比特人
+</code></pre>
+<p>demo:(remove)</p>
+<pre><code class="python">    movieName = [&#39;加勒比海盗&#39;,&#39;骇客帝国&#39;,&#39;第一滴血&#39;,&#39;指环王&#39;,&#39;霍比特人&#39;,&#39;速度与激情&#39;]
+
+    print(&#39;------删除之前------&#39;)
+    for tempName in movieName:
+        print(tempName)
+
+    movieName.remove(&#39;指环王&#39;)
+
+    print(&#39;------删除之后------&#39;)
+    for tempName in movieName:
+        print(tempName)
+</code></pre>
+<p>结果:</p>
+<pre><code class="python">    ------删除之前------
+    加勒比海盗
+    骇客帝国
+    第一滴血
+    指环王
+    霍比特人
+    速度与激情
+    ------删除之后------
+    加勒比海盗
+    骇客帝国
+    第一滴血
+    霍比特人
+    速度与激情
+</code></pre>
+<h3 id="5-排序-sort-reverse"><a href="#5-排序-sort-reverse" class="headerlink" title="5. 排序(sort, reverse)"></a>5. 排序(sort, reverse)</h3><p>sort方法是将list按特定顺序重新排列，默认为由小到大，参数reverse&#x3D;True可改为倒序，由大到小。</p>
+<p>reverse方法是将list逆置。</p>
+<pre><code class="python">&gt;&gt;&gt; a = [1, 4, 2, 3]
+&gt;&gt;&gt; a
+[1, 4, 2, 3]
+&gt;&gt;&gt; a.reverse()
+&gt;&gt;&gt; a
+[3, 2, 4, 1]
+&gt;&gt;&gt; a.sort()
+&gt;&gt;&gt; a
+[1, 2, 3, 4]
+&gt;&gt;&gt; a.sort(reverse=True)
+&gt;&gt;&gt; a
+[4, 3, 2, 1]
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/03/12/%E5%88%97%E8%A1%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/10/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B/">
+        <h2 class="post-title">软件测试流程</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/10
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="软件测试流程"><a href="#软件测试流程" class="headerlink" title="软件测试流程"></a>软件测试流程</h1><h4 id="1-需求分析"><a href="#1-需求分析" class="headerlink" title="1.需求分析"></a>1.需求分析</h4><p>阅读需求文档-&gt;产品文档-&gt;产品详细设计说明书-&gt;分析需求的点-&gt;参与需求评审</p>
+<h4 id="2-制定测试计划和测试方案"><a href="#2-制定测试计划和测试方案" class="headerlink" title="2.制定测试计划和测试方案"></a>2.制定测试计划和测试方案</h4><p>测试计划:测试整个项目的总体的规划<br>测试的范围，进度的安排 人力、物力的安排  整体的测试策略  风险的评估  风险的规避 ####5 w 1 h why when who what where how</p>
+<p>测试方案  how<br>被测试的目标  选取什么样的测试工具 测试的放大 测试的重点</p>
+<h4 id="3-设计测试用例"><a href="#3-设计测试用例" class="headerlink" title="3.设计测试用例"></a>3.设计测试用例</h4><p>边界值 等价类……</p>
+<h4 id="4-执行测试用例"><a href="#4-执行测试用例" class="headerlink" title="4.执行测试用例"></a>4.执行测试用例</h4><h4 id="5-评估阶段-测试报告"><a href="#5-评估阶段-测试报告" class="headerlink" title="5.评估阶段  测试报告"></a>5.评估阶段  测试报告</h4><hr>
+<p>title: 开发模型<br>date: 2023-06-28<br>tags:</p>
+<hr>
+<h1 id="1-瀑布模型"><a href="#1-瀑布模型" class="headerlink" title="1.瀑布模型"></a>1.瀑布模型</h1><h4 id="按照阶段生成检查点"><a href="#按照阶段生成检查点" class="headerlink" title="按照阶段生成检查点"></a>按照阶段生成检查点</h4><pre><code>
+1.问题定义
+2.可行性研究
+3.需求分析
+4.软件设计
+5.编码
+6.测试
+7.维护
+</code></pre>
+<p>瀑布模型的特点：<br>1.阶段间具有顺序性和依赖性<br>2.推迟实现<br>3.质量保证的观点<br>总结：瀑布模型是文档驱动的模型，遵守这个约定可使软件维护变得的比较容易一些，从而显著降低软件预算</p>
+<p>瀑布模型的优点：<br>为项目提供了按阶段划分的检查点、当前一阶段完成后，您只需要去关注后续阶段，可在迭代模型中应用瀑布模型</p>
+<p>瀑布模型缺点：<br>1.不适合需求模糊后需求经常变动的系统<br>2.在用户可能需要较长时间等待时间来获得一个可供使用的系统，也许会给用户信任程度带来影响和打击<br>3.由于开销逐步升级问题，它不希望存在早期阶段的反馈<br>4.在一个系统完成以前，它是无法预测一个新系统引入一个机构的影响</p>
+<hr>
+<h1 id="1-增量模型"><a href="#1-增量模型" class="headerlink" title="1.增量模型"></a>1.增量模型</h1><h4 id="分模块完成"><a href="#分模块完成" class="headerlink" title="分模块完成"></a>分模块完成</h4><pre><code>增量1 规格说明 -&gt; 设计 -&gt; 实现集成 -&gt; 交互客户
+增量2 规格说明 -&gt; 设计 -&gt; 实现集成 -&gt; 交互客户
+增量3 规格说明 -&gt; 设计 -&gt; 实现集成 -&gt; 交互客户
+增量4 规格说明 -&gt; 设计 -&gt; 实现集成 -&gt; 交互客户
+</code></pre>
+<p>增量模型把瀑布模型的顺序特征与快速原型法的迭代特征相结合将软件看作一系列相互联系的增量，在开发过程的各次迭代中，每次完成其中的一个增量</p>
+<hr>
+<h1 id="快速模型"><a href="#快速模型" class="headerlink" title="快速模型"></a>快速模型</h1><h4 id="快速原型"><a href="#快速原型" class="headerlink" title="快速原型"></a>快速原型</h4><pre><code>1.快速评价
+2.构造
+3.运行
+4.评价
+</code></pre>
+<p>快速模型优点:<br>克服瀑布模型的缺点，减少由于软件需求不明确带来的开发风险适合预先不能确切定义需求的软件系统的开发</p>
+<p>快速模型缺点：<br>所选用的开发技术和工具不—定符合主流的发展;快速建立起来的系统结构加上连续的修改可能会导致产品质量低下使用前提是要有一个展示性的产品原型，—定程度上可能会限制开发人员的创新</p>
+<hr>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/03/10/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/09/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/">
+        <h2 class="post-title">软件测试分类</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/9
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="软件测试分类"><a href="#软件测试分类" class="headerlink" title="软件测试分类"></a>软件测试分类</h1><h2 id="1-测试（开发）的阶段"><a href="#1-测试（开发）的阶段" class="headerlink" title="1.测试（开发）的阶段"></a>1.测试（开发）的阶段</h2><h3 id="1-单元测试"><a href="#1-单元测试" class="headerlink" title="1.单元测试"></a>1.单元测试</h3><p>编码完成前后<br>模块 类 函数 方法<br>开发人员 白盒测试人员</p>
+<h3 id="2-集成测试"><a href="#2-集成测试" class="headerlink" title="2.集成测试"></a>2.集成测试</h3><p>单元测试完成以后<br>模块已经完成编码<br>模块与模块之间内容<br>开发人员 白盒测试人员</p>
+<h3 id="3-系统测试"><a href="#3-系统测试" class="headerlink" title="3.系统测试"></a>3.系统测试</h3><p>集成测试完成之后<br>程序、软件 app 系统 网站 项目<br>整体测试<br>开发人员 白盒测试人员测试</p>
+<h3 id="4-验收（交付）测试"><a href="#4-验收（交付）测试" class="headerlink" title="4.验收（交付）测试"></a>4.验收（交付）测试</h3><p>系统测试之后<br>整个系统：α测试和β测试<br>媒体 用户</p>
+<h2 id="2-是否覆盖源码"><a href="#2-是否覆盖源码" class="headerlink" title="2.是否覆盖源码"></a>2.是否覆盖源码</h2><p>黑盒测试：没有覆盖源码（功能测试、性能测试）<br>白盒测试：覆盖源码（语句覆盖、判断覆盖、条件覆盖、路径覆盖）<br>灰盒测试：介于两者之间（关系输入输出、考虑程序运行的状态）</p>
+<h2 id="3-是否运行"><a href="#3-是否运行" class="headerlink" title="3.是否运行"></a>3.是否运行</h2><p>1.静态测试（测试程序的结构、程序过程、接口是否正常、代码的风格是否符合标准）<br>2.动态测试</p>
+<h2 id="4-是否自动化"><a href="#4-是否自动化" class="headerlink" title="4.是否自动化"></a>4.是否自动化</h2><p>1.手工测试<br>2.自动化测试</p>
+<h2 id="5-地域测试"><a href="#5-地域测试" class="headerlink" title="5.地域测试"></a>5.地域测试</h2><p>本地化测试<br>国际化测试</p>
+<h2 id="6-其他测试分类"><a href="#6-其他测试分类" class="headerlink" title="6.其他测试分类"></a>6.其他测试分类</h2><p>回归测试<br>冒烟测试（检查基本功能是否正常）<br>随机测试（monkey 测试）<br>探索测试</p>
+<hr>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/03/09/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/08/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">
+        <h2 class="post-title">字符串常见操作</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/8
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="字符串常见操作"><a href="#字符串常见操作" class="headerlink" title="字符串常见操作"></a>字符串常见操作</h1><p>如有字符串<code>mystr = &#39;hello world zhangsan and zhangsancpp&#39;</code>，以下是常见的操作</p>
+<h4 id="1-find"><a href="#1-find" class="headerlink" title="1. find"></a>1. find</h4><p>检测 str 是否包含在 mystr中，如果是返回开始的索引值，否则返回-1</p>
+<pre><code>mystr.find(str, start=0, end=len(mystr))
+</code></pre>
+<h4 id="2-index"><a href="#2-index" class="headerlink" title="2. index"></a>2. index</h4><p>跟find()方法一样，只不过如果str不在 mystr中会报一个异常.</p>
+<pre><code>mystr.index(str, start=0, end=len(mystr)) 
+</code></pre>
+<h4 id="3-count"><a href="#3-count" class="headerlink" title="3. count"></a>3. count</h4><p>返回 str在start和end之间 在 mystr里面出现的次数</p>
+<pre><code>mystr.count(str, start=0, end=len(mystr))
+</code></pre>
+<h4 id="4-replace"><a href="#4-replace" class="headerlink" title="4. replace"></a>4. replace</h4><p>把 mystr 中的 str1 替换成 str2,如果 count 指定，则替换不超过 count 次.</p>
+<pre><code>mystr.replace(str1, str2,  mystr.count(str1))
+</code></pre>
+<h4 id="5-split"><a href="#5-split" class="headerlink" title="5. split"></a>5. split</h4><p>以 str 为分隔符切片 mystr，如果 maxsplit有指定值，则仅分隔 maxsplit 个子字符串</p>
+<pre><code>mystr.split(str=&quot; &quot;, 2)    
+</code></pre>
+<h4 id="6-capitalize"><a href="#6-capitalize" class="headerlink" title="6. capitalize"></a>6. capitalize</h4><p>把字符串的第一个字符大写</p>
+<pre><code>mystr.capitalize()
+</code></pre>
+<h4 id="7-title"><a href="#7-title" class="headerlink" title="7. title"></a>7. title</h4><p>把字符串的每个单词首字母大写</p>
+<pre><code class="python">&gt;&gt;&gt; a = &quot;hello zhangsan&quot;
+&gt;&gt;&gt; a.title()
+&#39;Hello Zhangsan&#39;
+</code></pre>
+<h4 id="8-startswith"><a href="#8-startswith" class="headerlink" title="8. startswith"></a>8. startswith</h4><p>检查字符串是否是以 hello 开头, 是则返回 True，否则返回 False</p>
+<pre><code>mystr.startswith(hello)
+</code></pre>
+<h4 id="9-endswith"><a href="#9-endswith" class="headerlink" title="9. endswith"></a>9. endswith</h4><p>检查字符串是否以obj结束，如果是返回True,否则返回 False.</p>
+<pre><code>mystr.endswith(obj)
+</code></pre>
+<h4 id="10-lower"><a href="#10-lower" class="headerlink" title="10. lower"></a>10. lower</h4><p>转换 mystr 中所有大写字符为小写</p>
+<pre><code>mystr.lower()        
+</code></pre>
+<h4 id="11-upper"><a href="#11-upper" class="headerlink" title="11. upper"></a>11. upper</h4><p>转换 mystr 中的小写字母为大写</p>
+<pre><code>mystr.upper()    
+</code></pre>
+<h4 id="12-lstrip"><a href="#12-lstrip" class="headerlink" title="12. lstrip"></a>12. lstrip</h4><p>删除 mystr 左边的空白字符</p>
+<pre><code>mystr.lstrip()
+</code></pre>
+<h4 id="13-rstrip"><a href="#13-rstrip" class="headerlink" title="13. rstrip"></a>13. rstrip</h4><p>删除 mystr 字符串末尾的空白字符</p>
+<pre><code>mystr.rstrip()    
+</code></pre>
+<h4 id="14-strip"><a href="#14-strip" class="headerlink" title="14. strip"></a>14. strip</h4><p>删除mystr字符串两端的空白字符</p>
+<pre><code class="python">&gt;&gt;&gt; a = &quot;\n\t zhangsan \t\n&quot;
+&gt;&gt;&gt; a.strip()
+&#39;zhangsan&#39;
+</code></pre>
+<h3 id="15-isdigit"><a href="#15-isdigit" class="headerlink" title="15. isdigit"></a>15. isdigit</h3><p>如果 mystr 只包含数字则返回 True 否则返回 False.</p>
+<pre><code>mystr.isdigit() 
+</code></pre>
+<h3 id="16-join"><a href="#16-join" class="headerlink" title="16. join"></a>16. join</h3><p>str 中每个元素后面拼接上mystr,构造出一个新的字符串</p>
+<pre><code>mystr.join(str)
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/03/08/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/03/05/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B/">
+        <h2 class="post-title">测试用例</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/3/5
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h1><h4 id="测试用例定义"><a href="#测试用例定义" class="headerlink" title="测试用例定义"></a>测试用例定义</h4><p>测试用例又叫做test case，是为某个特殊目标而编制的一组测试输入、执行条件以及预期结果,以便测试某个程序路径或核实是否满足某个特定需求。</p>
+<h1 id="测试用例八大要素"><a href="#测试用例八大要素" class="headerlink" title="测试用例八大要素"></a>测试用例八大要素</h1><h4 id="1-测试用例编号"><a href="#1-测试用例编号" class="headerlink" title="1.测试用例编号"></a>1.测试用例编号</h4><p>编号由字符和数字组合成的字符串,用例编号具有唯一性、容易识别</p>
+<h4 id="2-测试项目-x2F-模块"><a href="#2-测试项目-x2F-模块" class="headerlink" title="2.测试项目&#x2F;模块"></a>2.测试项目&#x2F;模块</h4><p>测试的项目属于哪个项目或者被测试的需求、被测的模块、被测的单元等等</p>
+<h4 id="3-预置条件执行当前测试用例需要的前提条件-如果前提条件不满足-则后面的测试步骤不能进行或得不到预期结果"><a href="#3-预置条件执行当前测试用例需要的前提条件-如果前提条件不满足-则后面的测试步骤不能进行或得不到预期结果" class="headerlink" title="3.预置条件执行当前测试用例需要的前提条件,如果前提条件不满足,则后面的测试步骤不能进行或得不到预期结果"></a>3.预置条件执行当前测试用例需要的前提条件,如果前提条件不满足,则后面的测试步骤不能进行或得不到预期结果</h4><h4 id="4-测试输入测试用例执行过程中需要加工的外部信息-根据测试用例的具体条件有手工输入、数据库等"><a href="#4-测试输入测试用例执行过程中需要加工的外部信息-根据测试用例的具体条件有手工输入、数据库等" class="headerlink" title="4.测试输入测试用例执行过程中需要加工的外部信息.根据测试用例的具体条件有手工输入、数据库等"></a>4.测试输入测试用例执行过程中需要加工的外部信息.根据测试用例的具体条件有手工输入、数据库等</h4><h4 id="5-预期输出测试用例的预期输出结果-包括返回值内容、界面响应结果等"><a href="#5-预期输出测试用例的预期输出结果-包括返回值内容、界面响应结果等" class="headerlink" title="5.预期输出测试用例的预期输出结果,包括返回值内容、界面响应结果等"></a>5.预期输出测试用例的预期输出结果,包括返回值内容、界面响应结果等</h4><h4 id="6-操作步骤"><a href="#6-操作步骤" class="headerlink" title="6.操作步骤"></a>6.操作步骤</h4><p>执行当前测试用例需要经过的操作步骤，需要明确的给出一个步骤的描述，测试用例执行人员可根据该步骤完成测试用例执行</p>
+<h4 id="7-测试用例标题"><a href="#7-测试用例标题" class="headerlink" title="7.测试用例标题"></a>7.测试用例标题</h4><p>对测试用例的简单描述。用概括的语言描述该测试用例的测试点。每个测试用例的标题不能够重复，因为每个测试用例的测试点事不一样的。</p>
+<h4 id="8-级别"><a href="#8-级别" class="headerlink" title="8.级别"></a>8.级别</h4><p>对于测试用例的重要程度的区分.包含如下几种:</p>
+<p>高级别:保证系统基本功能、核心业务、重要特性、实际使用频率比较高的用例<br>中级别:重要程度介于高和低之间的测试用例<br>低级别:实际使用的频率不高，对系统业务功能影响不大的模块或功能的测试用例</p>
+<h4 id="其他要素"><a href="#其他要素" class="headerlink" title="其他要素"></a>其他要素</h4><p>。用例的设计者:能准确找到测试用例的设计人员,对用例修改时能方便找到人员<br>。用例设计日期:方便检查用例的设计进度,<br>。对应的开发人员:出现bug后能及时找到相应的人员进行修复<br>。测试结果:执行用例最后执行的结果,包括:pass、fail、block<br>。测试类型:功能、性能、压力等等</p>
+<hr>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/03/05/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    <div class="prev">
+        
+    </div>
+    <div class="page-index">
+        
+        <span class="current">1</span>
+        
+        <span>
+            <a class="page-num" href="/page/2/">2</a>
+            
+            
+        </span>
+        
+    </div>
+    <div class="next">
+        
+        <a class="page-num" href="/page/2/">
+            <i class="fa-solid fa-caret-right fa-fw"></i>
+        </a>
+        
+    </div>
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-div">
+    <div class="card-style">
+        <div class="avatar">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s1.ax1x.com/2023/07/07/pCc0KmV.jpg" alt="avatar" />
+        </div>
+        <div class="name">Chen Lan Lan</div>
+        <div class="description">
+            <p>Here’s an argvchs…</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/argvchs">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&uin=3364555156&site=qq&menu=yes">
+                    <i
+                        class="fa-brands fa-qq fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://twitter.com/argvchs">
+                    <i
+                        class="fa-brands fa-twitter fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a href="mailto:argvchs@outlook.com">
+                    <i
+                        class="fa-solid fa-envelope fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://www.bilibili.com/">blibli</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://github.com/">github</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://www.zhihu.com">zhihu</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://996.icu/#/zh_CN">eihei</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+                    <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Chen Lang&#39;s blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Chen Lan Lan
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+                </div>
+            </transition>
+            
+            <transition name="fade">
+                <div id="preview" ref="preview" v-show="previewShow">
+                    <img id="preview-content" ref="previewContent" />
+                </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        <script>
+            console.info("Welcome to Argvchs' blog!");
+            if (!window.hasOwnProperty("ontouchstart")) {
+                let html = '<canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas><script src="https://static-argvchs.netlify.app/js/fireworks.min.js"><\/script>';
+                document.body.append(document.createRange().createContextualFragment(html));
+            }
+        </script>
+        
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/nietzche.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: true,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
+</html>
